@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Graph</title>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rfi.css">
+
+
+</head>
+
+<body>
+    <h1>RFI Style</h1>
+    <div class="wrapper">
+    <canvas id="myChart" width="800" height="400"></canvas>
+</div>
+
+    <div>
+        <button class="btn">Dark</button>
+    </div>
+
+    <input id="source">
+<div id="result"></div>
+
+      
+    <!-- Scripts load at end so page is loaded first -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
+    <script src="chartsScript.js"></script>
+    <!-- Fault tolerance -->
+    <noscript>You need to enable JavaScript to view the full site.</noscript> 
+</body>
+
+</html>
