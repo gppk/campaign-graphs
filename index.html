@@ -22,9 +22,18 @@
         <button class="btn">Dark</button>
     </div>
 
+    <!-- Text box to input data, handled by JS to update array -->
     <input id="source">
-<div id="result"></div>
 
+    <!-- Add new field code  -->
+
+    <div id="wrapper">
+        <div id="field_div">
+            <input type="button" value="Add TextBox" onclick="add_field();">
+            <!-- When this is run new elements will be added inside this div, it will look like: -->
+            <!--     <p id="input_text1_wrapper"><input type="text" class="input_text" id="input_text1" placeholder="Enter Text"><input type="button" value="Remove" onclick="remove_field('input_text1');"></p> -->
+        </div>
+    </div>
       
     <!-- Scripts load at end so page is loaded first -->
     <script src="app.js"></script>

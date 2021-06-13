@@ -21,7 +21,7 @@ var myChart = new Chart(ctx, {
          }]
   },
  });
- 
+ var textBoxCount;
  const source = document.getElementById('source');
 const inputHandler = function(e) {
   console.log('input: ' +e.target.value );
@@ -33,3 +33,35 @@ const inputHandler = function(e) {
 }
 source.addEventListener('input', inputHandler);
 source.addEventListener('propertychange', inputHandler); // for IE8
+
+
+var textBoxArray= new Array;
+function add_field()
+{
+  textBoxCount=document.getElementsByClassName("input_text");
+  textBoxCount=textBoxCount.length+1;
+  document.getElementById("field_div").innerHTML=document.getElementById("field_div").innerHTML+
+  "<p id='input_text"+textBoxCount+
+  "_wrapper'><input type='text' class='input_text' id='input_text"+
+  textBoxCount+
+  "' placeholder='Enter Text'><input type='button' value='Remove' onclick=remove_field('input_text"+
+  textBoxCount+
+  "');></p>";
+  console.log('total_text: ' + textBoxCount)
+  textBoxArray.push('input_text'+textBoxCount)
+
+  const textBoxSource = document.getElementById('input_text'+textBoxCount);
+  textBoxSource.addEventListener('input', inputHandler1);
+  textBoxSource.addEventListener('propertychange', inputHandler1); // for IE8 
+
+}
+function remove_field(id)
+{
+  document.getElementById(id+"_wrapper").innerHTML="";
+}
+
+
+const inputHandler1 = function(e) {
+  console.log('added text Box: ' +e.target.value );
+
+}
