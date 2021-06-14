@@ -1,46 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaign Graph</title>
+    <title>Zero Graphs</title>
+    
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="rfi.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <h1>RFI Style</h1>
-    <div class="wrapper">
-    <canvas id="myChart" width="800" height="400"></canvas>
-</div>
-
-    <div>
-        <button class="btn">Dark</button>
-    </div>
-
-    <!-- Text box to input data, handled by JS to update array -->
-    <input id="source">
-
-    <!-- Add new field code  -->
-
-    <div id="wrapper">
-        <div id="field_div">
-            <input type="button" value="Add TextBox" onclick="add_field();">
-            <!-- When this is run new elements will be added inside this div, it will look like: -->
-            <!--     <p id="input_text1_wrapper"><input type="text" class="input_text" id="input_text1" placeholder="Enter Text"><input type="button" value="Remove" onclick="remove_field('input_text1');"></p> -->
+    <div class="container">
+        <div class="row">
+          <div class="col-sm my-auto">              
+            <div class="row">
+              <div class="col-xs-6"><input id="label0"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value0"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label1"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value1"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label2"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value2"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label3"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value3"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label4"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value4"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label5"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value5"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label6"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value6"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label7"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value7"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label8"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value8"></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6"><input id="label9"></div>
+              <div class="col-xs-6"><input size="4" maxlength="4" id="value9"></div>
+            </div>
+          </div>
+          <div class="col-sm" >
+                <canvas id="myChart" width="800" height="400"></canvas>
+                <div></div>
+                <div class="d-flex justify-content-center">
+                <button  id="btn-download">
+                  Download
+                </button>
+                </div>
+          </div>
         </div>
-    </div>
-      
-    <!-- Scripts load at end so page is loaded first -->
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
-    <script src="chartsScript.js"></script>
-    <!-- Fault tolerance -->
-    <noscript>You need to enable JavaScript to view the full site.</noscript> 
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
+      <script src="chartsScript.js"></script>
+      <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 </body>
 
 </html>
